@@ -8,6 +8,11 @@ import MovieList from './components/MovieList.vue';
 
 Vue.use(VueResource);
 
+import moment from 'moment-timezone';
+
+moment.tz.setDefault("UTC");
+Object.defineProperty(Vue.prototype, '$moment', { get() { return this.$root.moment} });
+
 new Vue({
     el: "#app",
     components: {
