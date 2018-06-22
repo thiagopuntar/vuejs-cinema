@@ -12,14 +12,19 @@
         }
     </style>
 </head>
-<body>
-<div id="app">
-    <div id="title">
-        <img src="/public/logo.png">
-        <h1>Vue.js Cinema</h1>
+<body> 
+    <div id="app">
+        <div id="title">
+            <img src="public/logo.png" alt="vue.js">
+            <h1>Vue-js Cinema</h1>
+        </div>
+        <div id="overview">
+            <div class="main">
+                <movie-list :genre="genre" :time="time" :movies="movies"></movie-list>
+                <movie-filter @check-filter="checkFilter"></movie-filter>
+            </div>
+        </div>
     </div>
-    <main id="main"></main>
-</div>
-<script src="/dist/build.js"></script>
+    <script src="/dist/build.js"></script>
 </body>
 </html>
