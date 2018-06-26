@@ -23,7 +23,9 @@ new Vue({
         return {
             genre: [],
             time: [],
-            movies: []
+            movies: [],
+            moment,
+            day: moment()
         }
     },
     methods: {
